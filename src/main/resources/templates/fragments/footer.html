@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <title>Footer Page</title>
+
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
     <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <style>
+        body {
+            padding-top: 80px;
+            background-color: cadetblue;
+        }
+    </style>
 </head>
+
+
+
 <body>
 
-<nav th:insert="fragments/navbar :: nav_fragment"></nav>
-<br/>
-<br/>
-<br/>
-<div class="container">
-    <div class="bg-primary">
-        Here is a index page
-    </div>
-</div>
+<footer th:fragment="footer_fragment" class="py-lg-4 bg-dark">
+    <p class="m-0 text-center text-white"> Copyright &copy; Store</p>
+</footer>
 
-
-<footer th:insert="fragments/footer :: footer_fragment"></footer>
 </body>
 </html>
